@@ -33,7 +33,6 @@
                     <label class="mb-2 block  text-[#181C40] font-bold" for="description">Description Post</label>
                     <textarea id="description" name="description" placeholder="Description Post"
                         class="focus:border-[#181C40] focus:outline-none focus:shadow-outline border p-3 w-full rounded-lg @error('description') border-red-500 @enderror">
-                        {{ old('description') }}
                     </textarea>
                     @error('description')
                         <span class="text-red-500 text-sm italic">{{ $message }}</span>

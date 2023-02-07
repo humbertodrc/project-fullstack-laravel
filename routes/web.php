@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\Register;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ImagenController;
-use App\Http\Controllers\WallController;
+use App\Http\Controllers\Profile;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,7 +36,8 @@ Route::post('/logout', [Logout::class, 'store'])->name('logout');
 
 Route::get('/{user:username}', [PostController::class, 'index'])->name('posts.index');
 Route::get('/post/create', [PostController::class, 'create'])->name('posts.create');
-Route::post('/post', [PostController::class, 'store'])->name('posts.store');
-Route::get('/wall/{user:username}', [WallController::class, 'index'])->name('wall.index');
+Route::post('/posts', [PostController::class, 'store'])->name('posts.store');
+Route::get('/posts/{post}', [PostController::class, 'show'])->name('posts.show');
 
 Route::post('/images', [ImagenController::class, 'store'])->name('images.store');
+
