@@ -33,10 +33,10 @@
                         <a class="md:p-4 py-2 block text-[#181C40] hover:text-[#050720]" href="{{ route('posts.create')}}">Create</a>
                     </li>
                     <li>
-                        <a class="md:p-4 py-2 block text-[#181C40] hover:text-[#050720]" href="">Posts</a>
+                        <a class="md:p-4 py-2 block text-[#181C40] hover:text-[#050720]" href="{{ route('posts.index',['user' => auth()->user()])}}">Posts</a>
                     </li>
                     <li>
-                        <a class="md:p-4 py-2 block text-[#181C40] hover:text-[#050720]" href="{{ route('posts.index',['user' => auth()->user()])}}">Profile</a>
+                        <a class="md:p-4 py-2 block text-[#181C40] hover:text-[#050720]" href="{{ route('profile.index',['user' => auth()->user()])}}">Profile</a>
                     </li>
                     <li>
                         <a class="md:p-4 py-2 block text-[#181C40] hover:text-[#050720]" href="#">Favorites</a>
