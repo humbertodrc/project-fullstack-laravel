@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <section class="container mx-auto mt-10">
+    <section class="container mx-auto mt-10 px-4">
         <h2 class="text-[#181C40] text-4xl text-center font-black my-10">Publicaciónes</h2>
 
         @if ($posts->count())
