@@ -12,8 +12,7 @@
 
 <body class="bg-[#E1F5FE]">
     <header>
-        <nav
-            class="flex flex-wrap items-center justify-between w-full py-4 md:py-0 px-4 text-lg text-gray-700">
+        <nav class="flex flex-wrap items-center justify-between w-full py-4 md:py-0 px-4 text-lg text-gray-700">
             <div>
                 <a href="#">
                     <img class="h-8 w-8 rounded-full"
@@ -30,20 +29,24 @@
             <div class="hidden w-full md:flex md:items-center md:w-auto" id="menu">
                 <ul class="pt-4 text-base text-gray-700 md:flex md:justify-between md:pt-0">
                     <li>
-                        <a class="md:p-4 py-2 block text-[#181C40] hover:text-[#050720]" href="{{ route('posts.create')}}">Create</a>
+                        <a class="md:p-4 py-2 block text-[#181C40] hover:text-[#050720]"
+                            href="{{ route('posts.create') }}">Create</a>
                     </li>
                     <li>
-                        <a class="md:p-4 py-2 block text-[#181C40] hover:text-[#050720]" href="{{ route('posts.index',['user' => auth()->user()])}}">Posts</a>
+                        <a class="md:p-4 py-2 block text-[#181C40] hover:text-[#050720]"
+                            href="{{ route('posts.index', ['user' => auth()->user()]) }}">Posts</a>
                     </li>
                     <li>
-                        <a class="md:p-4 py-2 block text-[#181C40] hover:text-[#050720]" href="{{ route('profile.index',['user' => auth()->user()])}}">Profile</a>
+                        <a class="md:p-4 py-2 block text-[#181C40] hover:text-[#050720]"
+                            href="{{ route('profile.index', ['user' => auth()->user()]) }}">Profile</a>
                     </li>
                     <li>
                         <a class="md:p-4 py-2 block text-[#181C40] hover:text-[#050720]" href="#">Favorites</a>
                     </li>
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
-                        <button type="submit" class="md:p-4 py-2 block text-[#181C40] hover:text-[#050720]">Sign off</button>
+                        <button type="submit" class="md:p-4 py-2 block text-[#181C40] hover:text-[#050720]">Sign
+                            off</button>
                     </form>
                 </ul>
             </div>
